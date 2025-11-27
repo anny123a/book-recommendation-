@@ -1,0 +1,126 @@
+# ============================
+# Python
+# ============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.egg
+*.pkl
+*.log
+*.tmp
+
+# Byte-compiled / optimized / DLL files
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# ============================
+# Virtual Environments
+# ============================
+venv/
+.venv/
+env/
+ENV/
+
+# ============================
+# Jupyter / Colab
+# ============================
+.ipynb_checkpoints/
+*.ipynb_save
+
+# ============================
+# Environment Variables
+# ============================
+.env
+*.env
+.env.*
+.venv.env
+
+# ============================
+# OS Files
+# ============================
+.DS_Store
+Thumbs.db
+
+# ============================
+# IDE / Editor
+# ============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================
+# Cache / Temp
+# ============================
+cache/
+logs/
+temp/
+tmp/
+*.cache
+
+# ============================
+# Machine Learning & Models
+# ============================
+/models/
+/checkpoints/
+/runs/
+*.pt
+*.pth
+*.h5
+*.onnx
+*.engine
+*.tflite
+*.pb
+*.weights
+
+# ============================
+# Datasets & Large Files
+# ============================
+/data/
+/dataset/
+/datasets/
+*.csv
+*.xlsx
+*.jsonl
+
+# ============================
+# Build Artifacts
+# ============================
+build/
+dist/
+*.spec
+
+# ============================
+# Node (if using JS/React in frontend)
+# ============================
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# ============================
+# Flask / Streamlit / Logs
+# ============================
+instance/
+*.db
+*.sqlite3
+*.sqlite
+*.log
+*.pid
+
+# ============================
+# Google Colab / Kaggle
+# ============================
+/mnt/
+/content/
+
+# ============================
+# AWS / GCP Keys
+# ============================
+*.pem
+*.key
+*.credentials

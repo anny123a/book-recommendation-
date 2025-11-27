@@ -1,0 +1,10 @@
+fastapi 
+uvicorn 
+pydantic-settings 
+pandas 
+openpyxl 
+requests 
+python-dotenv
+python-multipart
+streamlit
+openai
