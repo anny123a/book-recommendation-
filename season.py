@@ -117,10 +117,46 @@ def analyze_seasonal_coverage(start_date: datetime, end_date: datetime) -> Dict:
 #     return max(1.5, min(3.0, multiplier))  # Clamp between 1.5x and 3x
 
 
+# def calculate_peak_multiplier(pastsales: pd.DataFrame) -> float:
+#     """
+#     Calculate the peak vs non-peak sales multiplier from historical data.
+#     """
+#     # Reset index to access YEAR_MONTH as a column
+#     df = pastsales.reset_index()
+    
+#     # Convert YEAR_MONTH string to datetime
+#     df['date'] = pd.to_datetime(df['YEAR_MONTH'].astype(str) + '-01')
+#     df['season'] = df['date'].apply(get_season_info)
+
+#     # Calculate average sales for each season
+#     peak_sales = df[df['season'] == 'Peak Season']['MONTH_QTY'].mean()
+#     non_peak_sales = df[df['season'] == 'Non-Peak Season']['MONTH_QTY'].mean()
+
+#     if non_peak_sales > 0:
+#         multiplier = peak_sales / non_peak_sales
+#     else:
+#         multiplier = 2.0  # Default assumption
+
+#     return max(1.5, min(3.0, multiplier))  # Clamp between 1.5x and 3x
+
+
+
+
+
+
+
+# for empty past sales data
+
+
 def calculate_peak_multiplier(pastsales: pd.DataFrame) -> float:
     """
     Calculate the peak vs non-peak sales multiplier from historical data.
+    Returns default multiplier if no historical data available.
     """
+    # Handle empty DataFrame
+    if pastsales.empty:
+        return 2.0  # Default multiplier for first-time purchases
+    
     # Reset index to access YEAR_MONTH as a column
     df = pastsales.reset_index()
     

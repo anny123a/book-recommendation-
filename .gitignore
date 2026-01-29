@@ -260,6 +260,13 @@ instance/
 # ============================
 # Custom Ignored Files
 # ============================
-keepa_client_conditions1011.py
-keepa_client_conditions12.py
-keepa_client_conditions13.py
+# keepa_client_conditions1011.py
+# keepa_client_conditions12.py
+# keepa_client_conditions13.py
+
+ignore/
+the_copy/
+main.py
+system_prompt.py
+routers/
+
